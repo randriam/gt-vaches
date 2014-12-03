@@ -1,24 +1,52 @@
-GT Vaches
-=========
+GT Vaches :
+===========
 
-1. faire une copie locale :
+!!! on travaille directement dans la branche gh-pages, pas dans master !!!
+==========================================================================
+
+0. faire une copie locale :
    1. configurer tout selon https://help.github.com/articles/set-up-git/
-   2. puis :
-      
+   2. puis au choix :
+
       ``` 
       $ git clone git@github.com:randriam/gt-vaches.git
       ```
 
-ensuite aller dans le sous-dossier `gt-vaches`
+      ou
+
+      ``` 
+      $ git clone https://github.com/randriam/gt-vaches
+      ```
+   3. aller dans le dossier gt-vaches
+
+      ``` 
+      $ cd gt-vaches
+      ```
+   4. choisir la branche gh-pages :
+
+      ``` 
+      $ git checkout gh-pages
+      ```
+
+ensuite on travaille dans `gt-vaches` et ses sous-dossiers
 
 1. editer les fichiers
 
-2. commiter les modifs
+2. ajouter ou enlever un fichier
+   ```
+   $ git add fichier
+   ```
+   et
+   ```
+   $ git rm fichier
+   ```
+
+3. commiter les modifs
    ```
    $ git commit -a
    ```
 
-3. les renvoyer vers github
+4. les renvoyer vers github
    ```
-   $ git push origin master
+   $ git push origin gh-pages
    ```

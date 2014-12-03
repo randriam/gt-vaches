@@ -1,5 +1,0 @@
-normaliser les noms de fichier :
-YYYYMMDD_orateur_comments
-
-ne faire git add que sur les petits fichiers textes (tex, html...)
-garder les autres (jpg, pdf...) uniquement en local
