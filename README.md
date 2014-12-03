@@ -30,23 +30,33 @@ GT Vaches :
 
 ensuite on travaille dans `gt-vaches` et ses sous-dossiers
 
-1. editer les fichiers
+1. recuperer les derniers changements
 
-2. ajouter ou enlever un fichier
+   ```
+   $ git pull
+   ```
+
+2. editer les fichiers
+
+3. si besoin ajouter ou enlever un fichier
+ 
    ```
    $ git add fichier
    ```
+
    et
+
    ```
    $ git rm fichier
    ```
 
-3. commiter les modifs
+4. commiter les modifs
+
    ```
    $ git commit -a
    ```
 
-4. les renvoyer vers github
+5. les renvoyer vers github
    ```
    $ git push origin gh-pages
    ```
