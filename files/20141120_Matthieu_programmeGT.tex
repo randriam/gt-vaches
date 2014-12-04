@@ -1,0 +1,174 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[latin1]{inputenc}  %sous Linux, indispensable pour les accents graves/aigus au clavier
+\usepackage[T1]{fontenc} %sous Linux, indispensable pour les accents circonflexes au clavier
+%sous Linux, indispensable de compiler avec pdflatex pour avoir droit aux accents dans les subsections
+\usepackage[french]{babel} %pour avoir le titre de la bibliographie en français
+\usepackage{amsmath}\usepackage{amsbsy,amsopn,amstext,amssymb}
+\usepackage{fancyhdr} \renewcommand{\headrulewidth}{0pt} %pour supprimer la barre horizontale
+
+\renewcommand*\sec{\section} \newcommand*\ssec{\subsection}
+\newcommand\C{\mathbf{C}} \newcommand\Q{\mathbf{Q}} \newcommand\Z{\mathbf{Z}} \newcommand\lam{\Lambda}
+\newcommand*\ben{\begin{enumerate}} \newcommand\een{\end{enumerate}}
+\newcommand*\bit{\begin{itemize}} \newcommand\eit{\end{itemize}} \renewcommand*\i{\item}
+
+\makeatletter \renewcommand \maketitle{ \begin{center} \par{\LARGE\@title} %sinon quand je veux mettre un vspace négatif avant maketitle ça crée une nouvelle page blanche. A cause de la commande \new{titlepage} (ou \newpage ?) , que j'ai enlevée, dans la définition initiale de maketitle dans article.cls ? 
+\par{\small\@author} \par \vskip 3.5em
+\end{center} }\makeatother
+\title{Programme du GT Vari\'et\'es abéliennes, courbes hyperelliptiques et de Shimura.}\date{} \author{version du 20/11/2014}
+
+\begin{document}
+\vspace*{-1.5cm}\maketitle
+\thispagestyle{fancy}
+\cfoot{M. Rambaud}
+\sec{Variétés abéliennes}
+Pour un tore complexe $X=V/\lam$, explication :
+\ben
+\i \bit
+  \i de l'isomorphisme entre le groupe de Néron-Séveri de $X$, et certaines formes bilinéaires alternées sur $V$ entières sur $\lam$;
+  \i d'une version explicite (au choix) de la flèche première classe de Chern $\mathrm{Pic}(X)\xrightarrow{c_1} H^2(X,\Z)$; \eit
+\i du théorème d'Appel-Humbert;
+\i des conditions de Riemann.
+\i (Et, idéalement, de la correspondance entre sous-variétés abéliennes de $X$ et idempotents symétriques de $End_\Q(X)$).
+\een
+Références : par exemple \cite{BL}, \cite{GH}, \cite{Deb}, mais d'autres approches sont possibles.
+
+\sec{Algèbres de quaternions}
+\ben
+\i automorphismes, description explicite comme composition de deux corps quadratiques plongés;
+\i scindage, discriminant et plongements de corps quadratiques;
+\i ordres : théorie locale;
+\i ordres : théorie globale. 
+\een
+Références : par exemple \cite{Vig} ou \cite{Rei}
+
+\sec{Courbes de Shimura $X=\mathcal{H}/\mathcal{O}^{1}$}
+Avec une algèbre de quaternions sur $\Q$ et un ordre maximal $\mathcal{O}$ : 
+\bit
+\i Description comme quotient compact du demi plan supérieur $\mathcal{H}$ (\cite{Kat}, \S 5.4).
+\i Description comme ensemble de classes d'isomorphismes de certaines surfaces abéliennes polarisées (\cite{Lan}, chap. IX).
+\eit
+
+\sec{Points à multiplication complexe, sur $\C$}
+Soit $z$ un point de la courbe de Shimura $X=\mathcal{H}/\mathcal{O}^{1}$, représenté par un point $z$ du demi plan supérieur, et $A$ la variété abélienne sur laquelle il s'envoie. Description de l'équivalence entre \ben
+\i $A$ isogène à $E\times E$;
+\i L'anneau des endomorphismes de $A$ compatibles avec la multiplication quaternionique, n'est pas réduit à $\Z$ (mais de la forme $\Z[g]$, $g$ quadratique);
+\i $z$ est fixé par un ordre $\Z[g]$, d'un corps quadratique $\Q(g)$, (optimalement) plongé dans $\mathcal{O}$.
+\een
+(Et, idéalement, décrire les involutions d'Atkin-Lehner. Puis décrire une bijection entre : les points (CM) fixés par une involution d'Atkin Lehner, et les plongements optimaux, dans l'algèbre de quaternions, d'un corps quadratique correspondant à cette involution.)
+Référence : \cite{Clark}.
+
+\sec{Jacobiennes sur $\C$, I}
+Construction et diverses interprétations d'un diviseur $\Theta$.
+
+\sec{Jacobiennes sur $\C$, II}
+Théorème de Torelli. Théorème de Riemann sur les singularités de $\Theta$.
+
+Références pour les deux exposés : \cite{BL}, \cite{GH}, \cite{Nar} et l'appendice du \cite{RB}.
+
+\sec{Exposés plus spécialisés}
+Le contenu reste à déterminer, votre avis et votre aide sont bienvenus ! Idées :
+\ssec{Invariants d'Igusa sur $\C$ (2 exposés)}
+\bit
+\i Invariants des formes binaires de degré 6 (et plus)
+\i Espace de modules de surfaces abeliennes polarisées sur $\C$ (et leur compactification ?)
+\i Espaces de modules de courbes de genre 2 sur $\C$ (plusieurs constructions possibles : par exemple un ouvert de $\mathbf{P}(2,4,6,10)$, mais d'autres objets seraient-ils plus adaptés au GT ?)
+\eit
+
+\ssec{Variétés abéliennes, Jacobiennes et invariants d'Igusa mod p}
+\ben
+\i Automorphismes des surfaces abéliennes mod p, points supersinguliers sur les courbes de Shimura.
+\i Espaces de modules de surfaces abéliennes mod p.
+\i Idée de JP pour reconnaître un produit de courbes elliptiques.
+\i Calcul de la jacobienne mod p. Expliquer de quelle courbe, le produit de courbes elliptiques $E_1\times E_2$ est la jacobienne (\cite{Has}, prop 2.10).
+\een
+
+\ssec{Perte d'information dans l'interpr\'etation modulaire des courbes de Shimura}\bit
+\i Involutions d'Atkin-Lehner $w_{p|D}$ : par lesquelles doit-on quotienter la courbe lorsque l'on oublie la polarisation de la surface abélienne (\cite{Rot}).
+\i Calculer les points (CM) de ramification de ce quotient.\eit
+
+\ssec{Retrouver l'équation de la courbe de Shimura par interpolation aux points CM}
+\bit
+\i Calcul des points CM en pratique (techniques de \cite{AB} ou de Voight-Willis 2013).
+\i Calcul d'invariants d'Igusa mod p. Expliquer par exemple les idées de Lauter-Robert 2012 dans le cas d'un corps quartique, puis les adapter au cas des points CM ? 
+\i Calcul de degré de la courbe de Shimura (par exemple à l'aide des formules du genre et du nombre de points elliptiques. Ou en calculant l'équation de la courbe à l'aide de formes modulaires : Voight-Willis 2013 ou Yang 2012).
+\i Interpolation de l'équation la courbe à l'aide des points CM.
+\eit
+
+\ssec{S'il reste du temps}
+\bit
+\i Interprétation modulaire dans le cas d'un ordre d'Eichler de niveau $N$, perte d'information et quotient par les involutions d'Atkin-Lehner $w_{p|N}$.
+\i Généraliser les constructions pour une algèbre de quaternions sur un corps de nombres autre que $\Q$.
+\i Description explicite des courbes de genre 2 dans l'image des points CM de la courbe de Shimura (exemples dans Baba-Granath 2005).
+\eit
+
+\begin{thebibliography}{13}
+
+\bibitem[AB]{AB}
+Alsina-Bayer,
+\emph{Quaternion orders, Quadratic forms, and Shimura curves}.
+CRM lecture notes, 2004.
+
+\bibitem[B-L]{BL}
+Birkenhake et Lange,
+\emph{Complex abelian varieties}.
+Springer, 2003.
+
+\bibitem[Clark]{Clark}
+Pete Clark,
+\emph{thèse}, 2003.
+
+\bibitem[Deb]{Deb}
+Debarre,
+\emph{Tores et variétés abéliennes complexes}.
+SMF, 1999.
+
+\bibitem[G-H]{GH}
+Griffiths et Harris,
+\emph{Principles of algebraic geometry}.
+John Wiley \& sons, 1978.
+
+\bibitem[Has04]{Has}
+Hasset
+\emph{Classical and minimal models of the moduli space of curves of genus two}.
+notes d'introduction, 2004.
+
+\bibitem[Kat]{Kat}
+Katok,
+\emph{Fuschian groups}.
+Chicago university press, 1992.
+
+\bibitem[Lang]{Lan}
+Lang,
+\emph{Introduction to algebraic and abelian functions}
+Springer, 1972.
+
+\bibitem[Nar]{Nar}
+Narasimhan,
+\emph{Compact Riemann surfaces}.
+Birkhauser, 1992.
+
+\bibitem[RB]{RB}
+Mumford,
+\emph{the Red book of varieties and schemes}.
+LNM, 1974.
+
+\bibitem[Rei]{Rei}
+Reiner,
+\emph{Maximal orders}.
+Academic press, 1975.
+
+\bibitem[Rot]{Rot}
+Rotger,
+\emph{thèse}, 2003.
+
+\bibitem[Sta]{Sta}
+Jim Stankiewicz,
+\emph{thèse}, 2012.
+
+\bibitem[Vig]{Vig}
+Vignéras,
+\emph{Arithmétique des algèbres de quaternions}.
+LNM, 1978.
+
+\end{thebibliography}
+\end{document}
