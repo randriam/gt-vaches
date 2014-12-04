@@ -1,0 +1,219 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[latin1]{inputenc}  %sous Linux, indispensable pour les accents graves/aigus au clavier..  ça ne marche quand même pas dans ce fichier
+\usepackage[T1]{fontenc} %sous Linux, indispensable pour les accents circonflexes au clavier
+%sous Linux, indispensable de compiler avec pdflatex pour avoir droit aux accents dans les subsections
+\usepackage[french]{babel} %pour avoir le titre de la bibliographie en français
+\usepackage{amsmath}\usepackage{amsbsy,amsopn,amstext,amssymb}
+\usepackage{a4wide}
+\usepackage{mathtools}
+%usepackege{fourier} je ne sais pas l'installer !
+\usepackage[all]{xy}
+\renewcommand*\sec{\section} \newcommand*\ssec{\subsection}
+\newcommand\C{\mathbf{C}} \newcommand\Q{\mathbf{Q}} \newcommand\R{\mathbf{R}} \newcommand\Z{\mathbf{Z}} \newcommand\lam{\Lambda}
+\newcommand{\ca}{\mathcal{A}} \newcommand{\cH}{\mathcal{H}} \newcommand{\cm}{\mathcal{M}} \newcommand{\co}{\mathcal{O}}
+\newcommand*\ben{\begin{enumerate}} \newcommand\een{\end{enumerate}}
+\newcommand*\bit{\begin{itemize}} \newcommand\eit{\end{itemize}} \renewcommand*\i{\item}
+\newcommand{\End}{\mathrm{End}} \DeclareMathOperator*{\trd}{trd} \DeclareMathOperator*{\nrd}{nrd}
+\newcommand{\cvtwo}[2]{{\left(\begin{array}{c}{#1}\\ {#2}\end{array}\right)}}
+\newcommand{\mtwo}[4]{{\left(\begin{array}{cc}{#1} & {#2} \\ {#3} & {#4}\end{array}\right)}}
+
+\makeatletter \renewcommand \maketitle{ \begin{center} \par{\LARGE\@title\par} %sinon quand je veux mettre un vspace n\'egatif avant maketitle ça cr\'ee une nouvelle page blanche. A cause de la commande \new{titlepage} (ou \newpage ?) , que j'ai enlev\'ee, dans la d\'efinition initiale de maketitle dans article.cls ? 
+{\@author} \par{\@date}\par \vskip 3.5em %il ne comprenait pas " @date "
+\end{center} }\makeatother
+\title{Objectifs du GT pour l'ann\'ee} \author{M. Rambaud\\ (notes de J-P Flori et B. Smith)} \date{27/11/2014}
+
+\begin{document}
+\vspace*{-1.5cm}\maketitle
+\subsubsection*{Ce qu'on veut faire:}
+\begin{enumerate}
+\item[I]
+Param\'etrer une famille de surfaces ab\'eliennes avec
+multiplication par une alg\`ebre de quaternions...
+\item[II]
+...par une ``courbe de Shimura''...
+\item[III]
+...dont on veut calculer l'\'equation (mod $p$).
+\end{enumerate}
+\section{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Partie I
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{(a) nos quaternions}
+Soit \(B\) une alg\`ebre de quaternions sur \(\Q\): c'est \`a dire,
+\(B\) est une alg\`ebre de dimension \(4\) sur \(\Q\), telle que il existe
+\(a\) et \(b\in\Q\), tels que
+\[
+B = \Q\langle i,j\rangle
+\ ,
+\quad \text{avec}\quad
+i^2 = a,
+\
+j^2 = b,
+\
+ij = -ji
+\ .
+\]
+On impose les conditions suivantes:
+\begin{itemize}
+\item \(B\) est ``ind\'efinie'': ie \(B\otimes_\Q\R \cong M_2(\R)\).
+\item mais \(B\) est un corps non commutatif (et non pas $M_2(\Q)$)
+\item \(B\) et donc son discriminant, $D$, est $>1$,
+o\`u \(D = \prod_{p}p\) avec les premiers \(p\)
+tels que \(B\otimes_\Q \Q_p\) est un corps non commutatif
+(et non pas \(\cong M_2(\Q_p)\)).
+\eit
+Soit \(\co\) un ``ordre maximal''
+dans \(B\): c'est \`a dire que \(\co\) est un r\'eseau de rang \(4\) dans \(B\),
+constitut\'e d'\'el\'ements entiers sur \(\Z\). \(\co\)
+est alors un anneau.
+
+\subsection*{(b) construction des vari\'et\'es ab\'eliennes}
+On fixe, une fois pour toutes, un isomorphisme $B\otimes_\Q\R \cong M_2(\R)$, d'o\'u un plongement :
+\[
+\psi: B \hookrightarrow M_2(\R)
+\ .
+\]
+On a une action de \(M_2(\R)\) sur \(\C^2\):
+\[
+\mtwo{a}{b}{c}{d} \cvtwo{w_1}{w_2}
+=
+\cvtwo{aw_1 + bw_2}{cw_2 + dw_2}
+\]
+Soit \(u = \cvtwo{w_1}{w_2} \in \C^2\)
+tel que \(w_1/w_2 \notin \R\).
+Propri\'et\'e: l'orbite de \(u\) sous l'image de \(\co\), qu'on note
+\[
+\Lambda_u := \psi(\co)u
+\ ,
+\]
+est un r\'eseau de \(\C^2\).
+Alors, on a un tore complexe associ\'e \`a \(u\):
+\[
+A_u := \C^2/\Lambda_u
+\ .
+\]
+\subsection*{(c) construction d'une ``forme de Riemann''}
+Soit \(\mu \in B\) tel que \(\mu^2 = -1/D\)
+(cf. expos\'es)
+\footnote{On peut m\^eme choisir \(\mu^{-1}\in \co\)}.
+Soit
+\begin{align*}
+E : \Lambda_u\times\Lambda_u
+&
+\longrightarrow \Z
+\ ,
+\\
+(\psi(\alpha)u, \psi(\beta)u)
+&
+\longmapsto \trd(\mu\alpha\bar\beta)
+\end{align*}
+(o\`u, pour \(\alpha = x + iy + jz + ijw\),
+on a \(\bar\alpha := x - iy - jz - ijw\)
+et \(\trd(\alpha) = 2x\)).
+Soit \(E_\R\) la forme \(\R\)-bilin\'eaire altern\'ee \(E\)
+\'etendue \`a \(\C^2\); alors
+\begin{itemize}
+\item
+\(E(\sqrt{-1}\,\cdot,\sqrt{-1}\,\cdot) = E(\cdot,\cdot)\),
+\item
+\(E_\R\) est enti\`ere sur le r\'eseau \(\Lambda_u\), et
+\item
+``la forme hermitienne associ\'ee \`a \(E_\R\)
+est sym\'etrique d\'efinite positive'';
+\end{itemize}
+\(\iff E(\sqrt{-1}\cdot,\cdot) > 0\),
+ce qui implique que \(A_u\) est une vari\'et\'e alg\'ebrique.
+\subsection*{(d) isomorphismes}
+Soit \(\psi\) et \(\mu\) fix\'es.
+\`A quelle condition
+\((A_u,E_u,\psi)\) est isomorphe \`a \((A_v,E_v,\psi)\)?
+Notons que apr\`es \(u = \cvtwo{w_1}{w_2} \mapsto \cvtwo{w_1/w_2}{1}\),
+on peut supposer que
+\(u = \cvtwo{\tau}{1}\).
+Alors, si on note $\co^{(1)}$ les \'el\'ements de norme 1 dans $\co$, 
+\((A_\tau,E_\tau,\psi)\) est isomorphe \`a \((A_{\tau'},E_{\tau'},\psi)\)
+ssi
+\(\psi(\epsilon)\tau = \tau'\)
+pour un inversible \(\epsilon\in\co^{(1)}\),
+o\`u comme d'habitude
+\(\mtwo{a}{b}{c}{d}\cdot\tau = \frac{a\tau + b}{c\tau + d}\).
+\section{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Partie II
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{(a) courbes de Shimura}
+Le quotient \(X = \psi(\co^{(1)})\backslash\cH\), une surface de
+Riemann compacte,
+param\`etre les surfaces ab\'eliennes \(A_\tau\) que l'on vient de
+construire.
+\subsection*{(b) l'alg\`ebre d'endomorphismes}
+\subsubsection*{Liste des possibilit\'es}
+Th\'eoreme: si \(A\) est une surface ab\'elienne complexe simple,
+alors l'alg\`ebre des endomorphismes de $A$ : \(\End^0(A)=\End(A)\otimes\Q\) (qui ne pr\'eservent pas n\'ecessairement la polarisation), est l'une des suivantes:
+\begin{center}
+\begin{tabular}{rl|c}
+& \(\End(A)\otimes\Q\) & dimension \\
+\hline
+(i) & \(\Q\) & 3 \\
+(ii) & \(K\) corps quadratique imaginaire & 2 \\
+(iii) & corps \(B\) de quaternions sur $Q$, indéfinie & 1 \\
+(iv) & ``corps quartique CM'' & 0 \\
+\end{tabular}
+\end{center}
+(Ici, ``dimension'' parle du sous-espace de l'espace de modules
+correspondant.)
+Si $A$ n'est pas simple :
+\begin{center}
+\begin{tabular}{rl|c}
+(v) & \(M_2(K)\), \(K\) quadratique imaginaire & 0 \\
+(vi) & $\Q\times\Q$ & ? \\
+(vii) & $M_2(\Q)$ & 1 ? \\
+\end{tabular}
+\end{center}
+\subsubsection*{Nous sommes dans le cas (iii)}
+Il correspond aux conditions que nous avons impos\'ees sur $B$. Deux remarques :\bit
+\i Il y a deux autres alg\`ebres de quaternions dans la liste. En fait : (vii) $M_2(\Q)$ aurait conduit aux courbes modulaires classiques, tandis que (v) correspond aux points CM sur la courbe de Shimura (que l'on voudra \'etudier).
+\i Plus important : on n'a regard\'e que des r\'eseaux $\lam_\tau$ images d'un "ordre maximal" $\co$ de $B$. Alors qu'en g\'en\'eral, les sufaces ab\'eliennes qui admettent $B$ comme algèbre d'endomorphismes ont leur r\'eseau $\lam_\tau$ qui est l'image d'un id\'eal quelconque de $B$. Certains id\'eaux, comme les "ordres d'Eichler de niveau $N$", permettraient d\'ej\`a d'obtenir beaucoup plus de courbes de Shimura.
+\eit
+\subsubsection*{Remarques culturelles sur la liste}
+(iii) et (vii) En g\'en\'eral, une vari\'et\'e ab\'elienne de dimension sup\'erieure peut avoir son alg\`ebre d'endomorphismes \'egale \`a un troisi\`eme type d'alg\`ebre de quaternions, en plus de ceux de (iii) et (vii). $B$ est alors un corps de quaternions, \emph{totalement d\'efinie}, sur un corps totalement r\'eel $F$. C'est \`a dire que $B$ est un corps non commutatif de dimension 4 sur $F$, d\'efinie par le m\^eme type de relations que pr\'ec\'edemment, telle que pour tous les plongements $\sigma : F \hookrightarrow \R$, $B\otimes_{F,\sigma}\R$ soit, cette fois, isomorphe au \emph{corps des quaternions r\'eels $\mathbf{H}$} (et pas l'autre possibilit\'e, qui \'etait $M_2(\R)$). Cette situation n'existe pas dans le cas des surfaces ab\'eliennes simples, par l'"exercice" 9.9 (1) de Birkenhake et Lange (d\'emontr\'e dans Shimura 1963, proposition 15). Ce r\'esultat implique en effet que si $\End^0(A)$ contenait une telle alg\`ebre $B$ totalement d\'efinie, alors $A$ serait en fait \'egale au produit de deux courbes elliptiques $E_1\times E_2$, isog\`enes entre elles et \`a multiplication complexe par un corps quadratique $K$ sur $Q$
+\footnote{Dans cette situation, il est m\^eme d\'emontr\'e que $A$ est isomorphe \`a un produit de courbes elliptiques (Birkenhake-Lange cor 10.6.3, l'isomorphisme ne pr\'eservant pas n\'ecessairement la polarisation).}. Donc dans ce cas l'alg\`ebre d'endomorphismes $\End^0(A)$ est \'egale \`a $M_2(K)$ (c'est le cas (v)). $\End^0(A)$ contiendrait donc strictement $B$, et ne lui serait donc pas \'egale.
+
+(iii) une famille de ce type, param\'etr\'ee par une courbe de Shimura, peut \^etre vue dans l'intersection de deux familles distinctes de type (ii) param\'etr\'ees par des surfaces%
+\footnote{Sous les conditions rappel\'ees dans le th\'eor\`eme 5.4 de la th\`ese de Gruenewald.}.
+
+(v) D\`es lors que $A$ contient une courbe elliptique \`a multiplication complexe, (v) est bien la seule possibilit\'e. En effet, les "exercices" 9.9 (3) et (4) de Birkenhake et Lange montrent en particulier que, lorsque $\End^0(A)$ \emph{contient} un corps quadratique imaginaire $K$, alors - ou bien $A$ est \'egale au produit de deux courbes elliptiques $E_1\times E_2$, isog\`enes entre elles et \`a multiplication complexe par un corps quadratique $K$ sur $Q$ (cas (v), cf pr\'ec\'edemment) - ou bien on est dans les cas (iii) ou (vii) (et alors $A$ ne peut pas contenir de courbe elliptique \`a multiplication complexe).
+
+(vi) et (vii) correspondent par cons\'equent \`a la seule possibilit\'e restante, c'est \`a dire $A$ \'egale \`a un produit de courbes elliptiques $E_1\times E_2$ dont les alg\`ebres d'endomorphismes seraient \'egales \`a $\Q$, isog\`enes ((vii)) ou non ((vi)). J'ignore si le cas (vi) existe%
+\footnote{[List\'e dans la th\`ese de Gruenewald (p18), \'evoqu\'e dans la th\`ese de Pete Clark (p36) et dans Zannier 2012 (rk 3.4.4), mais pas dans la liste des "three lectures on Shimura curves" de Voight 2006.]}, et encore moins son \'eventuelle dimension dans l'espace de modules de vari\'et\'es ab\'eliennes principalement polaris\'ees]%
+.
+\section{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Partie III
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+$X$ correspond au choix d'un plongement $\psi : B \hookrightarrow M_2(\R)$, et d'un \'el\'ement $\mu$ dans $B$ (pour fabriquer la polarisation $E_\tau$), fix\'es une fois pour toutes. On vient de constuire une fl\`eche de $X$ dans $\mathcal{A}_{2,1}$ l'ensemble des surfaces ab\'eliennes avec un polarisation principale, mais qui oublie $\psi$. Donc a priori ce n'est pas une injection
+\footnote{Cela revient \`a quotienter $X$ par les isomorphismes de triplets $(A_\tau,E_\tau,\psi)$ qui pr\'eservent \`a la fois la polarisation $E_\tau$ et le plongement $\psi$ (pour que ce soit un automorphisme de $X$).}. 
+Effectivement elle est de degr\'e 4 ou 2.
+On appelle $\tilde{E}$ l'image de $X$ dans $\mathcal{A}_{2,1}$.
+Comment la d\'ecrire ?
+On peut utiliser $\mathcal{M}_2$ l'ensemble des courbes $C$ de genre 2 sur $\C$ auxquelles on associe leurs jacobiennes et un diviseur th\'eta $(\mathrm(Jac(C)), \Theta)$.
+Premier objectif: pr\'eimage $E$ de $\tilde{E}$ dans $\mathcal{M}_2$.
+
+$\mathcal{A}_{2,1}$ peut se voir comme un ouvert d'un quotient de $\mathbb{P}^3_\C$, o\`u l'image de $\mathcal{M}_2$ est dense.
+
+\begin{equation}\xymatrix  @R=1.1cm @C=1.4cm { & \ca_{2,1} & \ar@{_{(}->}[l]^{(\mathrm{Jac}(C),\Theta)} \cm_2 \\
+X \ar[r]^{[4:1] \text{ ou }[2:1]}& \tilde{E} \ar@{^{(}->}[u] & \ar@{_{(}->}[l] \ar@{^{(}->}[u]  E }
+\end{equation}
+
+
+Pour calculer l'\'equation de la courbe $X$, id\'ee: calculer l'image de points particuliers \og \`a multiplication complexe \fg, c'est \`a dire qui correspondent \`a des surfaces abl\'eliennes \`a multiplication par $M_2(K)$. Puis interpoler la courbe connaissant son degr\'e, et les points de ramification de l'application vers $\ca_{2,1}$ (qui sont certains points CM). Pour conna\^itre le degr\'e : soit calculer une \'equation de $X$ avec des d\'eveloppement de formes m\'eromorphes, soit le calculer \`a l'aide des formules donnant le genre et le nombre de points elliptiques (de degr\'es 2 et 3). Ensuite, essayer de dire quelque chose sur le degr\'e de $X$ mod p.
+
+\section{Expos\'es attribu\'es}
+Voir le programme du GT (version du 20/11/2014) pour les d\'etails, la bibliographie et surtout des propositions d'expos\'es plus sp\'ecialis\'es. 
+\begin{enumerate}
+\item Vari\'et\'es ab\'eliennes (S. Halaoui, 11/12).
+\item[2] Arithm\'etique des alg\`ebres de quaternions (B. Meyer, d\'ebut janvier)
+\item[3] Espace de modules de surfaces ab\'eliennes, vu comme un quotient compact de $\cH$ (V. Ducet, d\'ebut janvier)
+\item[4] Trois points de vue sur les points CM (J. Pl\^ut, fin janvier/d\'ebut f\'evrier)
+\item[5] Jacobiennes I (B. Smith, 26 ou 27 f\'evrier ?)
+\item[6] Jacobiennes II (C. Ritzenthaler, 26 ou 27 f\'evrier)
+\item[7.1] Invariants des formes binaires, espaces de modules de surfaces ab\'eliennes et de courbes de genre 2 (C. Ritzenthaler ?)
+\end{enumerate}
+\end{document}
