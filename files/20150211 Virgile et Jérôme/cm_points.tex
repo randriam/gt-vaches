@@ -1,0 +1,477 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage[francais]{babel}
+\usepackage{math}
+\usepackage{unicode}
+\usepackage[margin=20mm]{geometry}
+\let\ro\mathcal
+\let\fr\mathfrak
+\DeclareMathOperator\PSL{PSL}
+\DeclareMathOperator\PGL{PGL}
+\DeclareMathOperator\CM{CM}
+\DeclareMathOperator\Imag{Im}
+\def\qalg#1#2{\pa{\frac{#1}{#2}}}
+\def\F{\mathbb{F}}
+
+\begin{document}
+\title{CM points of Shimura curves}
+
+\section{Preliminaries: fixed points of homographies}
+\def\arraystretch{.6}
+
+We note that $\PSL_2(ℝ) = \PGL_2^+(ℝ)$, since any real matrix with
+determinant~$> 0$ is homothetic to a unique matrix with determinant~$1$.
+The group~$\PSL_2(ℝ)$ acts on~$ℙ^1(ℂ)$ by homographies:
+$\mat{a&b\\c&d} · z = \frac{az+b}{cz+d}$.
+Moreover, since $γ$~is real, we have~$\overline{γ · z} = γ ·
+\overline{z}$. This means that it is enough to look at the action
+of~$\PSL_2(ℝ)$ on the quotient of~$ℙ^1(ℂ)$ by complex conjugation,
+which is~$\ro H ∪ ℝ ∪ \acco {∞}$.
+
+
+The fixed points for the homographic action of~$γ$ correspond to
+(complex) eigenspaces of~$γ$.
+
+\begin{prop}\label{prop:fixed-points}
+Two matrices~$γ, γ' ∈ \PGL_2(ℝ)$
+have the same fixed points in~$ℙ^1(ℂ)$ iff $ℝ[γ] = ℝ[γ']$.
+\end{prop}
+
+This means that a quadratic field~$K ⊂ ℝ^{2×2}$ is determined by its
+fixed points in~$\ro H ∪ ℝ ∪ \acco{∞}$. The field is imaginary iff it has
+one fixed point in~$\ro H$ and real iff it has two in~$ℝ ∪ ∞$.
+
+Numerically, the matrix~$\mat{a & b \\ c & d}$ with eigenvalues~$λ, λ' =
+a+d-λ$ corresponds to the fixed points~$\frac{λ-d}{c}$, $\frac{a-λ}{c}$.
+
+\begin{df}
+We say that an element~$γ$ of~$\PSL_2(ℝ)$ is
+\begin{enumerate}
+\item \emph{elliptic} if it has two complex conjugate fixed points;
+\item \emph{hyperbolic} if it has two distinct fixed points in~$ℝ ∪
+\acco{∞}$;
+\item \emph{parabolic} if it has one single, real fixed point.
+\end{enumerate}
+\end{df}
+
+Since $\det γ = 1$, it is easy to see that $γ$~is hyperbolic iff
+$\abs{\Tr γ} > 2$ (or its discriminant is < 0), elliptic iff $\abs{\Tr γ}
+< 2$ (or its discriminant is > 0), and parabolic iff
+$\abs{\Tr γ} = 2$ (or its discriminant is 0).
+
+This means that, if $γ$~is algebraic over~$ℚ$, then the algebra~$ℚ(γ)$ is
+an imaginary quadratic field if $γ$~is hyperbolic, a real quadratic field
+(or $ℚ × ℚ$) if $γ$~is elliptic, and a local $ℚ$-algebra if $γ$~is
+parabolic.
+
+Let~$Γ ⊂ \mathrm{SL}_2(ℝ)$ be a discrete subgroup.
+A point of~$\ro H/Γ$ is called \emph{elliptic} if it is fixed
+by an elliptic element~$γ ∈ Γ$.
+\begin{prop}\label{prop:elliptic-cyclic}
+Let~$z ∈ \ro H/Γ$ be an elliptic point.
+Then the stabilizer~$Γ_z$ of~$z$ in~$Γ$ is a finite cyclic group.
+\end{prop}
+
+\begin{proof}
+Let~$g ∈ \mathrm{SL}_2(ℝ)$ such that~$g · i = z$.
+Then $g^{1} Γ_z g$~fixes~$i$,
+and hence included in the stabilizer of~$i$ in~$\mathrm{SL}_2(ℝ)$.
+This stabilizer is the group~$\mathrm{SO}_1(ℝ) ≃ ℝ/2πℤ$.
+Any discrete subgroup of this compact group is finite and cyclic.
+\end{proof}
+
+
+\begin{prop}\label{prop:elliptic-23}
+% Let~$γ ∈ ℤ^{2×2}$ such that~$γ^n = 1$.
+Let~$γ ∈ ℝ^{2 × 2}$ be entire over~$ℤ$ and or finite order.
+Then the order of~$γ$ is either~$2$, $3$, $4$, or~$6$.
+(The order of~$γ$ in~$\PGL_2(ℤ)$ is either~$2$ or~$3$).
+\end{prop}
+
+\begin{proof}
+Both eigenvalues of~$γ$ are entire over~$ℤ$ and the norm is~$± 1$,
+so that the eigenvalues are~$± e^{± i θ}$ for some~$θ ∈ ℝ$.
+This implies that~$\mathrm{Tr} θ = 2 \cos θ$.
+Since this is also an integer,
+the only possibilities for the characteristic polynomial of~$γ$ are
+$x^2±1$, $x^2±x±1$, and~$(x±1)^2$.
+\end{proof}
+
+\section{Quaternions and complex-multiplication points}%<<<1
+
+\subsection{Quadratic fields inside quaternion algebras}%<<<2
+\label{ss:quad-fields}
+
+Let~$B$ be a quaternion algebra over~$ℚ$.
+For any quadratic field~$K ⊂ B$ with non-trivial automorphism~$σ$,
+we know (by Skolem-Noether) that there exists an element~$j ∈ B ∖ 0$
+such that, for all~$x ∈ K$, $j x = σ(x) j$, and~$j^2 = β ∈ ℚ$.
+(Moreover, $j$~is determined up to multiplication by~$K^{×}$).
+This gives the following map~$B ↪ K^{2×2}$:
+$x ∈ K ↦ \mat{x&0\\0&σ(x)}$, $j ↦ \mat{0&j^2\\1&0}$.
+This implies that~$x + j y ∈ B ↦ \mat{x&j^2 σ(y)\\y&σ(x)}$
+and we easily check that this is an algebra homomorphism.
+This map extends to a splitting~$B ⊗_{ℚ} K ≃ K^{2×2}$.
+
+\begin{prop}\label{prop:B-contains-L}%<<<
+Let~$L = ℚ[√D]$ be a quadratic extension of~$ℚ$
+and~$B / ℚ$ be a quaternion algebra such that~$B ⊂ L^{2×2}$.
+Then $B$~contains a sub-field isomorphic to~$L$.
+\end{prop}
+
+
+\begin{proof}
+Let~$\acco{i, j}$ be a quaternionic basis of~$B$ over~$ℚ$:
+that is, $i^2 = c, j^2 = d ∈ ℚ$,
+and~$\Tr i = \Tr j = \Tr i j = 0$.
+Since $L^{2 × 2}$~is split over~$L$, it is isomorphic to~$(1,c/L)$,
+and has therefore a quaternionic basis~$\acco{i, ε}$ with~$ε^2 = 1$.
+Since $\acco{i, j}$~is another quaternionic basis of~$L$,
+we have~$j ∈ L[i] · ε$, or~$j = a ε$ with~$a ∈ L[i]$.
+Moreover, we see that~$d = j^2 = a ε a ε = a ‾{a} ε^2
+ = N_{L[i]/L} (a) ∈ ℚ$.
+
+We now prove the following lemma: let~$z ∈ L[i]$
+such that~$N_{L[i]/L} (z) ∈ ℚ$.
+Then $z ∈ ℚ[i]^{×} · ℚ[i√D]^{×}$.
+We write~$z = x + y √D$ with~$x, y ∈ ℚ[i]$.
+Since~$N_{L[i]/L}(z) = (x +_y √D) (‾{x} + ‾{y} √D) ∈ ℚ$,
+we see that~$(x ‾y + ‾x y) = 0$.
+This means that~$y/x ∈ i ℚ$, or that~$y = i t x$ with~$t ∈ ℚ$.
+We then have~$z = x + y √D = x (1 + i √D\, t)$ as required.
+
+Applying this lemma to~$a$, we see that
+we may write~$u j = (p + i √D\, q) ε$ with~$u ∈ ℚ[i]^{×}$,
+which means that~$(uj)^2 = (p^2 -c D q^2)$.
+Consequently:
+\begin{equation}
+B ≃ \qalg{c,\,p^2 - c D q^2}{ℚ}
+  ≃ \qalg{p^2 c, c^2 q^2 D - p^2 c}{ℚ}
+  ≃ \qalg{\frac{p^2}{c q^2}, D - \frac{p^2}{c q^2}}{ℚ}.
+\end{equation}
+In this last basis, we then have~$i^2 + j^2 = D$,
+so that~$ℚ[i + j] ≃ L ⊂ B$ as required.
+\end{proof}%>>>
+
+\subsection{Complex multiplication points}%<<<2
+
+Let $B$~be an indefinite quaternion algebra over~$ℚ$.
+We fix a real quadratic~$K ⊃ ℚ$
+and choose one of the two embeddings~$K ⊂ ℝ$.
+The construction of~\ref{ss:quad-fields} then defines
+an unique map~$η: B → ℝ^{2×2}$.
+(Note that the image of~$j K$ is well-defined!).
+Let also~$\ro O$ be an order of~$B$.
+
+For any~$z ∈ ℂ$, we write~$Λ(z)$
+for the lattice~$η(\ro O) · \mat{z\\1}$ of~$ℂ^2$.
+Let~$A(z)$ be the polarized abelian surface~$ℂ^2/Λ(z)$.
+
+We say that $z$~has \emph{complex multiplication} by~$L ⊂ B$
+if it is the fixed point of~$η(L)$,
+or equivalently if $η(L) · Λ(z) = Λ(z)$.
+
+\begin{thm}
+Let~$z ∈ ℂ$. The following are equivalent.
+\begin{enumerate}
+\item The point $z$~has complex multiplication
+(by an imaginary quadratic field~$L$).
+\item The abelian surface~$A(z)$ is isogenous to the square of
+an elliptic curve~$E$, having complex multiplication (by~$L$).
+\item The ring~$\End_{ℚ} (A)$ is isomorphic to~$L^{2×2}$.
+\item The ring of QM-automorphisms~$\End_{B} (A)$
+is not reduced to~$ℚ$.
+\end{enumerate}
+\end{thm}
+
+
+\begin{proof}
+(ii) $⇒ $ (iii). If $A(z) ∼ E × E$ then $\End_{ℚ} (A(z)) ≃
+\End_{ℚ}^{2×2}$.
+
+(iii) $⇒ $ (ii). By Falting's proof of the Tate conjecture for abelian
+varieties over number fields, we know that, for $ℓ$~prime,
+\[ \Hom_{ℚ} (A, E × E)⊗ ℤ_{ℓ} \quad ≃ \quad
+  \Hom_{\Gal} (T_{ℓ} (A), T_{ℓ} (E) × T_{ℓ} (E)). \]
+The assumption~(iii) means that the right-hand side contains an
+isomorphism~$ι$. The image of~$ι$ on the left-hand side is an isogeny.
+
+(iii) $⇒ $ (ii), elementary proof.
+Since $\End_{ℚ} (A)$~is not a division algebra, $A$~is not simple.
+This means that there exists an isogeny~$A ∼ E_1 × E_2$,
+where $E_1, E_2$~are elliptic curves.
+If~$E_1 ≁ E_2$ then $\End_{ℚ} A ≃ \End_{ℚ} E_1 × \End_{ℚ} E_2$,
+which is at most the product of two quadratic fields
+and therefore does not contain the quaternion algebra~$B$.
+This proves that $E_1$~is isogenous to~$E_2$, so that $A ∼ E_1^2$.
+% Assume that $A$~is simple: then $D =
+% \End_{ℚ} A$ is a division algebra. Since this acts (freely) on~$T_{ℓ}(A)$,
+% which has dimension~$4$, we know that~$\dim_{ℚ} D ≤ 4$.
+
+
+(iv) $⇒$ (i).
+Let~$L = \End_{B} A(z)$ and assume that~$L ≠ ℚ$.
+For any~$λ ∈ L ∖ ℚ$, the multiplication-by-~$λ$ map
+defines a map~$m_{λ}: ℂ^2 → ℂ^2$, stabilizing~$Λ(z)$
+(by the universal property of the universal cover of~$A(z)$).
+By the usual properties of abelian varieties,
+$m_{λ}$~is a $ℂ$-linear map.
+Since~$m_{λ}(z) ∈ η(\ro O)·z$,
+there exists~$c ∈ \ro O$ such that~$m_{λ}(z) = η(c) z$.
+Moreover, since $λ$~is a $B$-endomorphism,
+$m_{λ}$~commutes with all elements of~$η(\ro O)$,
+which implies that $c$~lies in the center of~$B$.
+Since $B$~is a central simple $ℚ$-algebra, this means that $c ∈ ℚ$.
+In other words, $z$~is fixed by the homographic action of~$λ$.
+We just showed that $z$~has complex multiplication by~$L$.
+
+(i) $⇒$ (iv), not-working proof.
+We write~$X = η(\ro O^{×+}) ∖ \ro H$ for the Shimura curve
+and $\ro A → X$ for the relative abelian surface
+with quaternionic multiplication by~$\ro O$.
+
+Let~$ι: \acco{z} ↪ X$ be the injection of the point~$z$.
+We then know that $A(z) = \ro A ×_{X, ι} \acco{z}$
+is the fibre at~$z$ of the surface~$\ro A$.
+
+Assume that $z$~has complex multiplication by a ring~$R$.
+This means that there exists~$λ ∈ H ∖ ℚ$
+such that~$η(λ)·z = z$. Write~$γ = η(λ) ∈ ℝ^{2×2}$;
+then $γ ∘ ι = ι$,
+Let~$\ro A_{γ} = \ro A ×_{X} γ$ be the pull-back of~$\ro A$ along~$γ$,
+and~$A_{γ} = A(z) ×_{\ro A} \ro A_{γ}$.
+Since~$γ ∘ ι = ι$, $A_{γ}$~is the fibre of~$\ro A_{γ}$ above~$z$,
+and therefore isogenous (as a $B$-QM surface) to~$A(z)$.
+
+Therefore, the scalar~$λ ∈ H ∖ ℚ$ defines
+an endomorphism~$m_{λ}$ of~$A(z)$.
+We see that $m_{λ}$~has the same characteristic polynomial as~$λ$,
+which means that $m_{λ}$~is an embedding of~$R$ in~$B$.
+
+(i) $⇒ $(iv).
+Assume that $z$~has complex multiplication by an element~$x ∈ B ∖ ℚ$.
+Since $\Imag z > 0$, $L = ℚ(x)$~is imaginary quadratic over~$ℚ$.
+Write~$η(x) = \mat{a&b\\c&d}$.
+Then~$x · \mat{z\\1} = (c z + d) \mat{z\\1}$,
+so that~$u = (c z + d)$~is an endomorphism of~$Λ(z)$.
+Moreover, since $u$~is a homothety, it commutes to~$B$,
+so that it is a $B$-endomorphism of~$A(z)$.
+Finally, since $L$~is imaginary, $L ≠ K$, therefore~$c ≠ 0$ and~$u ∉ ℝ$.
+
+(iii) $⇒$ (iv).
+By Prop.~\ref{prop:B-contains-L}, since $B ⊂ L^{2×2}$,
+$B$~contains a sub-field~$L'$ isomorphic to~$L$.
+Write~$L' = ℚ[√{D}]$: then the element~$√{D} ∈ B$
+is diagonalizable over~$ℚ$,
+and therefore of the form~$\mat{√D\\&-√D}$ in some basis of~$L^2$.
+This shows that there exists maps~$L ⊂ B ⊂ L^{2×2}$
+such that the composition is the map~$x ↦ \mat{x\\&σ(x)}$,
+where $σ$~is the non-trivial automorphism of~$L/ℚ$.
+We now see that the $L$-homothety matrices
+commute with all elements of~$B$, so that~$\End_{B} A = L$.
+
+(iv) $⇒$ (iii)
+Let~$R = \End_{ℚ} A ⊃ B$.
+Then $C = \End_{B} A$~is the commutant of~$B$ in~$R$.
+Since $B$~is central simple, if $R = B$ then~$C = ℚ$,
+which is impossible.
+Hence~$R ≠ B$.
+\end{proof}
+
+
+Let~$z ∈ X(\ro O)$ be a CM point by
+the imaginary quadratic field~$L ⊂ B$.
+We say that $z$~has \emph{complex multiplication by~$\ro A = L ∩ \ro O$}.
+For any quadratic order~$\ro A$ over~$ℤ$,
+we write~$\CM (\ro O, \ro A)$ for the set of points of~$X(\ro O)$
+having complex multiplication by~$\ro A$.
+
+
+\begin{prop}\label{prop:elliptic-cm}
+A point~$z ∈ X(\ro O)$ is elliptic
+iff it has complex multiplication by a imaginary quadratic order
+isomorphic to one of the two quadratic orders
+$ℤ[√{-1}]$~or~$ℤ[\frac{1+√{-3}}{2}]$.
+\end{prop}
+
+\begin{proof}
+The elements~$γ ∈ \ro O$ fixing~$z ∈ \ro H/\ro O$
+are entire over~$ℤ$ and of finite order,
+and therefore of order~$2$, $3$, $4$~or~$6$ in an imaginary quadratic field.
+\end{proof}
+
+\begin{prop}\label{prop:cm-equivalent}
+Let~$\ro A, \ro A' ⊂ \ro O$ be two imaginary quadratic orders.
+The CM points associated with~$\ro A$ and~$\ro A'$ coincide
+iff $\ro A'$~is conjugated to~$\ro A$
+by an inner automorphism of~$\ro O$: $\ro A' = x^{-1} \ro A x$
+for~$x ∈ \ro O^{×+}$.
+\end{prop}
+
+\begin{proof}
+Assume~$\ro A' = x^{-1} \ro A x$.
+Let~$z$ be a fixed point of~$\ro A$: $η(a) z = z$ for~$a ∈ A$.
+Then, for~$a' = x^{-1} a x ∈ \ro A'$, $η(a') (η(x^{-1}) z) = η(x^{-1}) z$,
+so that $x^{-1} z$~has complex multiplication by~$\ro A'$.
+
+Conversely, assume that two quadratic orders~$\ro A$, $\ro A'$
+have conjugate fixed points~$z, z' = σ z$.
+Replacing~$\ro A'$ by~$σ \ro A' σ^{-1}$,
+we may assume that~$z = z'$.
+We then use Prop.~\ref{prop:fixed-points} to conclude.
+\end{proof}
+
+\subsubsection{Examples.}
+Let~$B_6$ be the quaternion algebra over~$ℚ$ ramified at
+the primes~$2$ and~$3$: for example, $B_6 = \qalg{2,3}{ℚ}$.
+Let~$i, j ∈ B_6$ such that~$i^2 = 2$, $j^2 = 3$, $ij + ji = 0$.
+A maximal order of~$B_6$ is
+$\ro O = \chev {1, i, \frac{1+i+j}{2}, \frac{j+ij}{2}}$.
+We fix the real quadratic field~$K = ℚ(√2) ⊂ B_6$
+which gives the embedding
+\begin{equation}
+η: B_6 → ℝ^{2×2}, i ↦ \mat{√2\\&-√2},
+j ↦ \mat{&3\\1}, ij ↦ \mat{&-3√2\\√2}.
+\end{equation}
+
+Let~$α = \frac{i+3ij}{2}$; then we check that~$α^2 = -13$,
+so that~$ℚ(α) ≃ ℚ(√{-13}) ⊂ B_6$.
+We have~$η(α) = \frac{√2}{2} \mat{1&-9\\3&-1}$,
+so that the fixed point of~$ℚ(α)$
+is the image in~$X(\ro O)$ of~$z(α) = \frac{1+√{-26}}{3}$.
+
+Let~$β = \frac{i+ij}{2}$; then~$β^2 = -1$,
+so that~$ℚ(β) = ℚ(√{-1}) ⊂ B_6$.
+We have~$η(β) = \frac{√2}{2} \mat{1&-3\\1&-1}$,
+so that the fixed point of~$ℚ(β)$
+is the image in~$X(\ro O)$ of~$z(β) = 1 + √{-2}$.
+
+\paragraph{Unramified case.} Let~$B_1 = (1,1 / ℚ) = ℚ^{2×2}$
+be the split quaternion algebra over~$ℚ$.
+We write $i = \mat{1\\&-1}$, $j = \mat{&1\\1}$, $ij = \mat{&1\\-1}$,
+so that~$i^2 = j^2 = 1$ and~$(ij)^2 = -1$.
+Let~$\ro O(N) = \chev{1, \frac{1+i}{2}, \frac{N+1}{2} j,
+  \frac{j+ij}{2}}$.
+We check that $\ro O(N)$~is an order of~$B_1$.
+Its image~$η(\ro O(N))$
+is the congruence group~$Γ_0(N) = \acco{\mat{a&b\\c&d} ∈
+\mathrm{SL}_2(ℤ),
+  c ≡ 0 \pmod{N}}$.
+Therefore, the Shimura curve~$X(\ro O(N))$
+is the classical modular curve~$X_0(N)$.
+
+Let~$d ∈ ℤ$ and~$δ = \frac{d+1}{2} i + \frac{d-1}{2} ij ∈ \ro O$.
+The fixed point of~$η(δ) = \mat{&d\\1}$ in~$\ro H$
+is~$z = √{d}$, which is imaginary if~$d < 0$.
+
+\section{In characteristic~$p$: supersingular points}%<<<1
+
+% \subsection{Reminders about Honda-Tate theory}
+% 
+% We give a short reminder about classification of isogeny classes of
+% abelian surfaces over a finite field~$k = \F_q$.
+% \begin{equation}
+% \frac{\acco{\text{abelian varieties over~$k$}}}{\text{isogeny}}
+%   \;≃\;
+% \frac{\acco{\text{$q$-Weil numbers}}}{\text{Galois}}
+% \end{equation}
+% where a \emph{$q$-Weil number} is an algebraic integer~$α$
+% such that, for all~$σ: ℚ(α) ↪ ℂ$, $\abs{σ(α)} = √q$.
+% 
+
+Let~$A$ be an abelian surface defined over the field~$k$,
+with quaternionic multiplication by the indefinite algebra~$B$,
+\emph{i.e.} equipped with an (injective) morphism~$B ↪ R = \End A ⊗ ℚ$.
+
+\begin{thm}
+Let~$A$ be an abelian surface over~$k$,
+with QM by the indefinite quaternion algebra~$B$.
+Then either
+\begin{enumerate}
+\item $A$~is isogenous to the square $E^2$ of an elliptic curve, or
+\item $A$~is simple and $\End_{ℚ} A = B$.
+\end{enumerate}
+\end{thm}
+
+
+\paragraph{If $A$~is not simple,}
+then $A$~is isogenous to a product~$E_1 × E_2$ of two elliptic curves.
+If $E_1 ≁ E_2$ then since~$R = \End_{ℚ} E_1 × \End_{ℚ} E_2$,
+we have at least one injection~$B ↪ \End_{ℚ} E_i$,
+so that the curve~$E_i$ is supersingular.
+However, in this case, the endomorphism ring of~$E_1$ is
+the quaternion algebra~$B_{p,∞}$ ramified at~$\acco{p,∞}$.
+Since $B_{p,∞}$~is a definite quaternion algebra, we have~$B ≠ B_{p,∞}$,
+which is impossible. This proves that~$E_1 ∼ E_2$.
+
+We therefore have~$A ∼ E^2$ and~$R = \End_{ℚ} A = (\End_{ℚ} E)^{2×2}$.
+Let~$C = \End_{ℚ} E$.
+If $C = ℚ$ then $R = ℚ^{2×2}$ is a (split) quaternion algebra over~$ℚ$
+and there exists a map~$B → R$ iff $B = R$.
+If $C$~is an imaginary quadratic field then it must split~$B$.
+The last case is when $C$~is the quaternion algebra~$B_{p,∞}$.
+We can show that,
+for any indefinite quaternion algebra~$B$ and any prime~$p$,
+there exists an embedding~$B ↪ (B_{p,∞})^{2×2}$.
+
+\paragraph{If $A$~is simple,}
+then its endomorphism algebra~$R = \End_{ℚ} A$ is a simple algebra.
+Let~$K$ be the center of~$R$.
+Since $\dim A = 2$, the field~$K$ is an extension of~$ℚ$
+of degree~$1$, $2$ or~$4$.
+
+If $[K:ℚ] = 4$ then~$R = K$ and $R$~is commutative,
+which is impossible since~$B ⊂ R$.
+
+If $K = ℚ$ then, since $R$~is central simple over~$ℚ$,
+it is a quaternion algebra over~$ℚ$, hence~$R = B$.
+
+If $K$~is a real quadratic field, then $R$~is
+a quaternion algebra over~$K$, containing~$B$ and therefore~$B ⊗ K$.
+Since $A$~is simple, $R$~is not split over~$K$.
+Therefore, $K$~does not split~$B$,
+and $R$~contains a real quadratic extension~$K'$ of~$K$,
+which is therefore a totally real quartic extension of~$ℚ$.
+By [Mumford, Corollary p. 191], this implies that~$4 ∣ \dim A$,
+which is impossible.
+
+Assume that $K$~is an imaginary quadratic field.
+Then since $R$~is a quaternion algebra over~$K$
+containing~$B$, we can show that~$R = B ⊗_{ℚ} K$.
+
+We can show that this last case may only happen when
+the base field~$k$ has characteristic~$p > 0$.
+$\End_{ℚ} A$~contains a CM quartic field~$L$.
+If~$p = 0$ then $A$~would have its endomorphism ring equal to
+the CM field~$L$; this impossible since $\End_{ℚ} A$~is not commutative.
+
+Let~$\fr q$ be a place of~$K$ that does \emph{not} divide~$p$.
+\textsf{XXX} (by Honda-Tate?) Then $\fr q$~is split in~$R$:
+$R⊗_{K} K_{\fr q} ≃ K_{\fr q}^{2×2}$.
+Since $R$~is a division algebra,
+it is not split at all places of~$K$,
+and is therefore ramified at the two places~$\fr p, \fr p'$~dividing~$p$.
+This means that the discriminant of~$R$ over~$K$ is~$\fr p \fr p' = p$.
+
+Assume that $p$~does not divide the discriminant of~$B/ℚ$.
+Then the embedding $B ↪ R$, when tensoring by~$ℚ_p$,
+gives an embedding
+\begin{equation}
+B ⊗_{ℚ} ℚ_{p} = ℚ_p^{2×2} \quad↪\quad
+R ⊗_{ℚ} ℚ_p = R ⊗_{K} (K_{\fr p} ⊕ K_{\fr p'}).
+\end{equation}
+Since the algebra~$ℚ_p^{2×2}$ has nilpotent elements
+while~$R_{\fr p} ⊕ R_{\fr p'}$ does not, this is a contradiction.
+
+Therefore, $p$~divides $\mathrm{disc} B/ℚ$.
+This means that $B⊗_{ℚ} ℚ_p$~is a division algebra.
+The Tate module~$T_p(A)$ has dimension~$0$, $1$~or~$2$.
+The map~$B ↪ \End_{ℚ} (A)$ then gives a map
+$ρ: B ⊗ {ℚ_p} → \End_{ℚ_p} (T_p(A) ⊗_{ℤ_p} ℚ_p)$.
+If $T_p(A) ≠ 0$, then $ρ(1) = 1$ and $ρ$~is therefore injective.
+This gives an embedding~$B_p ↪ ℚ_p^{i×i}$ for~$i ≤ 2$,
+which is impossible.
+
+
+\end{document}

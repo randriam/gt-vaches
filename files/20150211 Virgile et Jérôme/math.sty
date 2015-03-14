@@ -1,0 +1,295 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{math}
+
+% Package inclusions%<<<
+\RequirePackage{amsmath,amssymb,amsfonts,amsthm,mathrsfs}
+% \RequirePackage[hang,perpage]{footmisc}
+\RequirePackage{xkeyval} % for option processing
+\RequirePackage{stmaryrd}% for \llbracket, \lightning
+\RequirePackage{unicode} % for unicode characters
+%>>>
+% Macro definitions%<<<
+\def\RequirePackageUnlessLoaded[#1]#2{%
+  \@ifpackageloaded{#2}{}{\RequirePackage[#1]{#2}}%
+}
+%>>>
+% Option processing%<<<
+\let\math@theoremstyle\relax
+\RequirePackage{xkeyval}
+\DeclareOptionX{theorems}[absolute]{\def\math@theoremstyle{[#1]}}
+\DeclareOptionX{notheorems}{\def\math@theoremstyle{[no]}}
+
+\ProcessOptionsX
+
+%>>>
+
+% Default configuration%<<<
+\ifx\directlua\undefined
+\RequirePackageUnlessLoaded[T1]{fontenc}
+% \RequirePackageUnlessLoaded[francais]{babel}
+\RequirePackageUnlessLoaded[utf8]{inputenc}
+\else
+\fi
+%>>>
+
+% Useful macros
+\def\@ifdisplay#1#2{\mathchoice{#1}{#2}{#2}{#2}}%
+% Theorems%<<<
+% We use two parameters for the theorems:
+% - language (French[default] or English);
+% - theorem numbering style, as passed by option to the package.
+
+% Defining both starred and un-starred version of theorem at once.%<<<
+\def\newtheorems#1{\@ifnextchar[{\@nthms@a{#1}}{\@nthms@b{#1}{}}}
+\def\@nthms@a#1[#2]{\@nthms@b{#1}{[#2]}}
+\def\@nthms@b#1#2#3{%
+  \@ifnextchar[{\@nthms@c{#1}{#2}{#3}}{\@nthms@d{#1}{#2}{#3}{}}}
+\def\@nthms@c#1#2#3[#4]{\@nthms@d{#1}{#2}{#3}{[#4]}}
+\def\@nthms@d#1#2#3#4{
+  \edef\m@gic##1{##1{#1}#2{#3}#4\ifx \relax#2\relax\math@theoremstyle\fi
+  ##1*{#1*}{#3}}\m@gic\newtheorem
+}
+%>>>
+
+\def\tmp@a{[no]}
+\ifx\math@theoremstyle\tmp@a
+ % no theorems...
+\else
+\def\math@thm@thm{Th\'eor\`eme}
+\def\math@thm@prop{Proposition}
+\def\math@thm@lem{Lemme}
+\def\math@thm@cor{Corollaire}
+\def\math@thm@df{D\'efinition}
+\def\math@thm@rmk{Remarque}
+
+\ifx\l@french\undefined\else \ifnum\l@french=\language
+  \def\math@thm@thm{Théorème}
+  \def\math@thm@lem{Lemme}
+  \def\math@thm@cor{Corollaire}
+  \def\math@thm@df{Définition}
+  \def\math@thm@rmk{Remarque}
+\fi \fi
+\def\tmp@a{[absolute]}
+\ifx\math@theoremstyle\tmp@a \let\math@theoremstyle\relax \fi
+\theoremstyle{plain}
+\newtheorems{thm}{\math@thm@thm}%\math@theoremstyle
+\newtheorems{prop}[thm]{\math@thm@prop}
+\newtheorems{lem}[thm]{\math@thm@lem}
+\newtheorems{cor}[thm]{\math@thm@cor}
+\theoremstyle{remark}
+\newtheorems{rmk}[thm]{\math@thm@rmk}
+\theoremstyle{definition}
+\newtheorems{df}[thm]{\math@thm@df}
+\def\qed{\leavevmode\unskip~\ensuremath{\lhd}}
+%   \def\qedhere{\qed\skipqed}
+\fi
+
+% This defines a local theorem style. It is used with
+% \begin{namedtheorem}{Riemann conjecture}...\end{namedtheorem}
+\def\namedtheorem#1{\let\math@namedtheorem\undefined
+\newtheorem*{math@namedtheorem}{#1}\math@namedtheorem}
+\let\endnamedtheorem\@endtheorem
+%>>>
+% Fonts%<<<
+\let\ro\mathscr
+\let\go\mathfrak
+%>>>
+% Swaps from default settings%<<<
+\def\letswap#1#2{\let\@tmpa#1\let#1#2\let#2\@tmpa}
+% Obsoleted by definitions in unicode.sty
+% \letswap\phi\varphi
+% \letswap\epsilon\varepsilon
+% \letswap\Im\Imaginary % \Im is reused below
+%>>>
+% Math operators%<<<
+% Definition%<<<%<<<
+\def\ExplicitMathOperators#1{%
+  \ifx\end#1\let\next\relax\else%
+  \begingroup
+    \escapechar\m@ne
+    \xdef\@tmp##1{##1\noexpand#1{\string #1}}%
+  \endgroup
+  \@tmp\DeclareMathOperator
+  \let\next\ExplicitMathOperators
+\next}
+%>>>%>>>
+% Linear algebra
+\DeclareMathOperator\End{End}
+\DeclareMathOperator\Aut{Aut}
+\DeclareMathOperator\Hom{Hom}
+\DeclareMathOperator\Mor{Mor}
+\DeclareMathOperator\Ker{Ker}
+\DeclareMathOperator\Coker{Coker}
+\DeclareMathOperator\Img{Im}
+\DeclareMathOperator\Tr{Tr}
+\DeclareMathOperator\Vect{Vect}
+% Misc
+\DeclareMathOperator\Gal{Gal}   % Galois group
+\DeclareMathOperator\Ext{Ext}   % Ext functor
+\DeclareMathOperator\Tor{Tor}   % Tor functor
+\DeclareMathOperator\Card{Card} % cardinality
+\DeclareMathOperator\Id{Id}     % identity
+\DeclareMathOperator\Spec{Spec} % spectre
+\DeclareMathOperator\Frac{Frac} % fraction ring
+\DeclareMathOperator\Div{Div}   % divisor group
+\DeclareMathOperator\Jac{Jac}   % Jacobian variety
+\DeclareMathOperator\Pic{Pic}   % Picard group
+\DeclareMathOperator\Fil{Fil}   % filtration
+\DeclareMathOperator\Gr{Gr}     % graduate of filtration
+\DeclareMathOperator\Sym{Sym}   % symmetrical product
+%>>>
+% Delimiter pairs%<<<
+\def\@defdelim#1#2#3{\def#1##1{{\left#2##1\right#3}}}
+\@defdelim\pa()
+\@defdelim\cro[]
+\@defdelim\acco\{\}
+\@defdelim\chev<>
+\@defdelim\abs\vert\vert
+\@defdelim\norm\Vert\Vert
+\@defdelim\angle\langle\rangle
+\@defdelim\floor\lfloor\rfloor
+\@defdelim\ceil\lceil\rceil
+\@defdelim\bcro\llbracket\rrbracket
+\def\mat#1{\begin{pmatrix}#1\end{pmatrix}}
+
+% EXPERIMENTAL: 
+% \delim macro uses natural delimiters such as
+% \delim[x] \delim(x) \delim{x} \delim|x| \delim<x>
+\def\delim{\futurelet\@let@token\@dodelim}
+\def\@dodelim{%
+  \let\next\acco
+  \ifx\@let@token( \let\next\delim@pa\fi
+  \ifx\@let@token[ \let\next\delim@cro\fi
+  \ifx\@let@token< \let\next\delim@chev\fi
+  \ifx\@let@token| \let\next\delim@abs\fi
+\next}%
+\def\delim@pa(#1){\pa{\mathbf{#1}}}
+\def\delim@cro[{\@ifnextchar[{\delim@cro@a}{\delim@cro@b}}
+\def\delim@cro@a[#1]]{\bcro{#1}}
+\def\delim@cro@b#1]{\cro{#1}}
+\def\delim@chev<#1>{\chev{#1}}
+\def\delim@abs#1{\@ifnextchar|{\delim@abs@a}{\delim@abs@b}}
+\def\delim@abs@a|#1||{\norm{#1}}
+\def\delim@abs@b#1|{\abs{#1}}
+% %>>>
+% Various symbols%<<<
+\DeclareMathOperator*{\limp}{\varprojlim}
+\DeclareMathOperator*{\limi}{\varinjlim}
+\DeclareMathOperator{\Ga}{\mathbb{Ga}}
+\DeclareMathOperator{\Gm}{\mathbb{Gm}}
+\let\ksi\xi
+\let\leqhoriz\leq \let\leq\leqslant
+\let\geqhoriz\geq \let\geq\geqslant
+\let\vide\varnothing
+\def\prive{{\!\smallsetminus}}
+\def\transpose{\,{}^{\mathrm{t}\!}}
+\def\application#1#2#3#4{\begin{array}{rcl}%
+  \displaystyle#1&\longrightarrow&\displaystyle #2\\%
+  \displaystyle#3&\longmapsto&\displaystyle #4\\\end{array}}
+%>>>
+% Arrows%<<<
+
+% Extensible arrows%<<<
+\def\mapstofill@{\arrowfill@{\mapstochar\relbar}\relbar\rightarrow}
+\def\xmapsto#1#2{\ext@arrow 0399\mapstofill@{#1}{#2}}
+\def\mapsfromfill@{\arrowfill@\leftarrow\relbar{\relbar\mapsfromchar}}
+\def\xmapsfrom#1#2{\ext@arrow 0399\mapsfromfill@{#1}{#2}}
+\def\longhookrightarrow{\DOTSB\lhook\protect\relbar\protect\joinrel\rightarrow}
+\def\hookrightarrowfill@{\arrowfill@{\lhook\mkern 3mu}\relbar\rightarrow}
+\def\xhookrightarrow#1#2{\ext@arrow 0399\hookrightarrowfill@{#1}{#2}}
+%>>>
+
+% Automatic arrows%<<<
+\def\@matharrow#1#2#3{%
+  \let\@matharr@short@#1 \let\@matharr@long@#2 \let\@matharr@x@#3
+  \let\@matharr@up@\relax \let\@matharr@down@\relax
+\@matharr@step}
+\def\@matharr@step{\futurelet\@matharr@what \@matharr@}
+\def\@matharr@{\let\next\@matharr@do
+  \ifx ^\@matharr@what\let\next\@matharr@up \fi
+  \ifx _\@matharr@what\let\next\@matharr@down \fi
+\next}
+\def\@matharr@up^#1{\def\@matharr@up@{#1}\@matharr@step}
+\def\@matharr@down_#1{\def\@matharr@down@{#1}\@matharr@step}
+\def\@matharr@do{%
+  \let\@matharr@do@\@matharr@x
+  \ifx\@matharr@up@\relax
+    \ifx\@matharr@down@\relax
+    % Make an unlabeled arrow. Make it long if in display mode, short
+    % otherwise.
+      \def\@matharr@do@{%
+	\@ifdisplay{\@matharr@long@}{\@matharr@short@}}%
+    \fi
+  \fi
+\@matharr@do@}
+% Make a labeled extensible arrow.
+\def\@matharr@x{%
+  \@ifdisplay
+  {\@matharr@x@[\mkern 8mu\@matharr@down@\mkern 8mu]%
+    {\mkern 8mu\@matharr@up@\mkern 8mu}}%
+  {\@matharr@x@[\mkern 12mu\@matharr@down@\mkern 12mu]%
+    {\mkern 12mu\@matharr@up@\mkern 12mu}}%
+}
+
+\def\autorightarrow{\@matharrow\rightarrow\longrightarrow\xrightarrow}%
+\def\autoleftarrow{\@matharrow\leftarrow\longleftarrow\xleftarrow}%
+\def\automapsto{\@matharrow\mapsto\longmapsto\xmapsto}%
+\def\automapsfrom{\@matharrow\mapsfrom\longmapsfrom\xmapsfrom}%
+
+\def\autohookrightarrow{\@matharrow\hookrightarrow\longhookrightarrow
+  \xhookrightarrow}
+
+%>>>
+%>>>
+% % \max{x1, ...} met vraiment une accolade%<<<
+% 
+% \long\def\@ifgroup#1#2{\def\reserved@a{#1}\def\reserved@b{#2}%
+%   \futurelet\@let@token\@ifgroup@}
+% \begingroup \catcode`\{=12 \catcode`\[=1
+% \global\def\@ifgroup@[%
+%   \ifx\@let@token\@sptoken \let\reserved@c\@xifgroup@ \else
+%     \if\@let@token { \let\reserved@c\reserved@a
+%     \else \let\reserved@c\reserved@b \fi
+%   \fi \reserved@c}
+%   \def\:[\@xifgroup@} \expandafter\gdef\: [\futurelet\@let@token\@ifgroup@}
+% \endgroup
+% 
+% \def\max{\@ifgroup{\max@g}{\max@}}
+% \def\max@g#1{\max@\acco{#1}}
+% \def\max@{\qopname\relax o{max}}
+% %>>>
+% displaymath closing trick%<<<
+\let\@math@end@old=\]
+\def\]{\catcode`\;=12\catcode`\:=12 \afterassignment\@math@end@new
+\global\let\@math@endtok}
+\def\@math@end@new{%
+  \def\tmp@a##1##2{%
+    \ifx\@math@endtok##1 ##2\global\let\@math@endtok\ignorespaces\fi}%
+  \tmp@a..\tmp@a,,\tmp@a;{~;}\tmp@a:{~:}
+\@math@end@old\@math@endtok}
+%>>>
+
+% Numbering: (i), (ii) etc.
+\def\labelenumi{(\roman{enumi})}
+% so that we don't mix up footnote marks with exponents
+\renewcommand{\thefootnote}{\Roman{footnote}}
+\def\oldnos#1{\ensuremath{\mathcode`\,="013B\fam\@ne#1}}
+\def\ssi#1{si et seulement s\ifx i#1'\else i \fi#1}
+\def\iff{if and only if}
+
+% Diagonal matrices%<<<
+\def\diagmat#1{%
+  \def\math@diag@L{}\def\math@diag@M##1{}\math@diag@step#1&\end
+\begin{pmatrix}\math@diag@M\\\end{pmatrix}}
+
+\def\math@diag@step#1&{%
+  \edef\math@diag@M##1{\math@diag@M{##1}\math@diag@L#1##1}
+  \edef\math@diag@L{\math@diag@L&}%
+\@ifnextchar\end\@gobble\math@diag@step}
+%>>>
+
+% LuaLaTeX compatibility
+% TODO:
+% - a chemistry mode |...|
+
+% vim: fdm=marker fmr=<<<,>>>

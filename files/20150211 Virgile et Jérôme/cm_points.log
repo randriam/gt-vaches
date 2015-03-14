@@ -1,0 +1,1056 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.20)  14 MAR 2015 15:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**cm-points.tex
+(./cm_points.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 4 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)) (./math.sty
+Package: math 
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen103
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks17
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks18
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
+\XKV@depth=\count99
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))
+(./stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+) (./unicode.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+0391 (decimal 913)
+   defining Unicode char U+0392 (decimal 914)
+   defining Unicode char U+0393 (decimal 915)
+   defining Unicode char U+0394 (decimal 916)
+   defining Unicode char U+0395 (decimal 917)
+   defining Unicode char U+0396 (decimal 918)
+   defining Unicode char U+0397 (decimal 919)
+   defining Unicode char U+0398 (decimal 920)
+   defining Unicode char U+0399 (decimal 921)
+   defining Unicode char U+039A (decimal 922)
+   defining Unicode char U+039B (decimal 923)
+   defining Unicode char U+039C (decimal 924)
+   defining Unicode char U+039D (decimal 925)
+   defining Unicode char U+039E (decimal 926)
+   defining Unicode char U+039F (decimal 927)
+   defining Unicode char U+03A0 (decimal 928)
+   defining Unicode char U+03A1 (decimal 929)
+   defining Unicode char U+03A3 (decimal 931)
+   defining Unicode char U+03A4 (decimal 932)
+   defining Unicode char U+03A5 (decimal 933)
+   defining Unicode char U+03A6 (decimal 934)
+   defining Unicode char U+03A7 (decimal 935)
+   defining Unicode char U+03A8 (decimal 936)
+   defining Unicode char U+03A9 (decimal 937)
+   defining Unicode char U+03B1 (decimal 945)
+   defining Unicode char U+03B2 (decimal 946)
+   defining Unicode char U+03B3 (decimal 947)
+   defining Unicode char U+03B4 (decimal 948)
+   defining Unicode char U+03B5 (decimal 949)
+   defining Unicode char U+03B6 (decimal 950)
+   defining Unicode char U+03B7 (decimal 951)
+   defining Unicode char U+03B8 (decimal 952)
+   defining Unicode char U+03B9 (decimal 953)
+   defining Unicode char U+03BA (decimal 954)
+   defining Unicode char U+03BB (decimal 955)
+   defining Unicode char U+03BC (decimal 956)
+   defining Unicode char U+03BD (decimal 957)
+   defining Unicode char U+03BE (decimal 958)
+   defining Unicode char U+03BF (decimal 959)
+   defining Unicode char U+03C0 (decimal 960)
+   defining Unicode char U+03C1 (decimal 961)
+   defining Unicode char U+03C2 (decimal 962)
+   defining Unicode char U+03C3 (decimal 963)
+   defining Unicode char U+03C4 (decimal 964)
+   defining Unicode char U+03C5 (decimal 965)
+   defining Unicode char U+03C6 (decimal 966)
+   defining Unicode char U+03C7 (decimal 967)
+   defining Unicode char U+03C8 (decimal 968)
+   defining Unicode char U+03C9 (decimal 969)
+   defining Unicode char U+03D0 (decimal 976)
+   defining Unicode char U+03D1 (decimal 977)
+   defining Unicode char U+03D5 (decimal 981)
+   defining Unicode char U+03D6 (decimal 982)
+   defining Unicode char U+03D8 (decimal 984)
+   defining Unicode char U+03D9 (decimal 985)
+   defining Unicode char U+03DA (decimal 986)
+   defining Unicode char U+03DB (decimal 987)
+   defining Unicode char U+03DC (decimal 988)
+   defining Unicode char U+03DD (decimal 989)
+   defining Unicode char U+03DE (decimal 990)
+   defining Unicode char U+03DF (decimal 991)
+   defining Unicode char U+03E0 (decimal 992)
+   defining Unicode char U+03E1 (decimal 993)
+   defining Unicode char U+03F0 (decimal 1008)
+   defining Unicode char U+03F1 (decimal 1009)
+   defining Unicode char U+03F5 (decimal 1013)
+   defining Unicode char U+03F6 (decimal 1014)
+   defining Unicode char U+1D62 (decimal 7522)
+   defining Unicode char U+1D63 (decimal 7523)
+   defining Unicode char U+1D64 (decimal 7524)
+   defining Unicode char U+1D65 (decimal 7525)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2032 (decimal 8242)
+   defining Unicode char U+2033 (decimal 8243)
+   defining Unicode char U+2034 (decimal 8244)
+   defining Unicode char U+2035 (decimal 8245)
+   defining Unicode char U+2038 (decimal 8248)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203C (decimal 8252)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+203E (decimal 8254)
+   defining Unicode char U+2042 (decimal 8258)
+   defining Unicode char U+2045 (decimal 8261)
+   defining Unicode char U+2046 (decimal 8262)
+   defining Unicode char U+2047 (decimal 8263)
+   defining Unicode char U+2048 (decimal 8264)
+   defining Unicode char U+2049 (decimal 8265)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+2062 (decimal 8290)
+   defining Unicode char U+2070 (decimal 8304)
+   defining Unicode char U+2074 (decimal 8308)
+   defining Unicode char U+2075 (decimal 8309)
+   defining Unicode char U+2076 (decimal 8310)
+   defining Unicode char U+2077 (decimal 8311)
+   defining Unicode char U+2078 (decimal 8312)
+   defining Unicode char U+2079 (decimal 8313)
+   defining Unicode char U+207F (decimal 8319)
+   defining Unicode char U+2080 (decimal 8320)
+   defining Unicode char U+2081 (decimal 8321)
+   defining Unicode char U+2082 (decimal 8322)
+   defining Unicode char U+2083 (decimal 8323)
+   defining Unicode char U+2084 (decimal 8324)
+   defining Unicode char U+2085 (decimal 8325)
+   defining Unicode char U+2086 (decimal 8326)
+   defining Unicode char U+2087 (decimal 8327)
+   defining Unicode char U+2088 (decimal 8328)
+   defining Unicode char U+2089 (decimal 8329)
+   defining Unicode char U+208A (decimal 8330)
+   defining Unicode char U+208B (decimal 8331)
+   defining Unicode char U+208C (decimal 8332)
+   defining Unicode char U+208D (decimal 8333)
+   defining Unicode char U+208E (decimal 8334)
+   defining Unicode char U+2090 (decimal 8336)
+   defining Unicode char U+2091 (decimal 8337)
+   defining Unicode char U+2092 (decimal 8338)
+   defining Unicode char U+2093 (decimal 8339)
+   defining Unicode char U+2095 (decimal 8341)
+   defining Unicode char U+2096 (decimal 8342)
+   defining Unicode char U+2097 (decimal 8343)
+   defining Unicode char U+2098 (decimal 8344)
+   defining Unicode char U+2099 (decimal 8345)
+   defining Unicode char U+209A (decimal 8346)
+   defining Unicode char U+209B (decimal 8347)
+   defining Unicode char U+209C (decimal 8348)
+   defining Unicode char U+2102 (decimal 8450)
+   defining Unicode char U+2107 (decimal 8455)
+   defining Unicode char U+210A (decimal 8458)
+   defining Unicode char U+210B (decimal 8459)
+   defining Unicode char U+210C (decimal 8460)
+   defining Unicode char U+210D (decimal 8461)
+   defining Unicode char U+210F (decimal 8463)
+   defining Unicode char U+2110 (decimal 8464)
+   defining Unicode char U+2111 (decimal 8465)
+   defining Unicode char U+2112 (decimal 8466)
+   defining Unicode char U+2113 (decimal 8467)
+   defining Unicode char U+2115 (decimal 8469)
+   defining Unicode char U+2118 (decimal 8472)
+   defining Unicode char U+2119 (decimal 8473)
+   defining Unicode char U+211A (decimal 8474)
+   defining Unicode char U+211D (decimal 8477)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2124 (decimal 8484)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+2128 (decimal 8488)
+   defining Unicode char U+212A (decimal 8490)
+   defining Unicode char U+212B (decimal 8491)
+   defining Unicode char U+212C (decimal 8492)
+   defining Unicode char U+212D (decimal 8493)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+212F (decimal 8495)
+   defining Unicode char U+2130 (decimal 8496)
+   defining Unicode char U+2131 (decimal 8497)
+   defining Unicode char U+2132 (decimal 8498)
+   defining Unicode char U+2135 (decimal 8501)
+   defining Unicode char U+2136 (decimal 8502)
+   defining Unicode char U+2137 (decimal 8503)
+   defining Unicode char U+2138 (decimal 8504)
+   defining Unicode char U+213C (decimal 8508)
+   defining Unicode char U+213D (decimal 8509)
+   defining Unicode char U+213E (decimal 8510)
+   defining Unicode char U+213F (decimal 8511)
+   defining Unicode char U+2140 (decimal 8512)
+   defining Unicode char U+2141 (decimal 8513)
+   defining Unicode char U+2144 (decimal 8516)
+   defining Unicode char U+2146 (decimal 8518)
+   defining Unicode char U+2148 (decimal 8520)
+   defining Unicode char U+2149 (decimal 8521)
+   defining Unicode char U+214B (decimal 8523)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2194 (decimal 8596)
+   defining Unicode char U+2195 (decimal 8597)
+   defining Unicode char U+2196 (decimal 8598)
+   defining Unicode char U+2197 (decimal 8599)
+   defining Unicode char U+2198 (decimal 8600)
+   defining Unicode char U+2199 (decimal 8601)
+   defining Unicode char U+219A (decimal 8602)
+   defining Unicode char U+219B (decimal 8603)
+   defining Unicode char U+219E (decimal 8606)
+   defining Unicode char U+21A0 (decimal 8608)
+   defining Unicode char U+21A2 (decimal 8610)
+   defining Unicode char U+21A3 (decimal 8611)
+   defining Unicode char U+21A4 (decimal 8612)
+   defining Unicode char U+21A6 (decimal 8614)
+   defining Unicode char U+21A9 (decimal 8617)
+   defining Unicode char U+21AA (decimal 8618)
+   defining Unicode char U+21AB (decimal 8619)
+   defining Unicode char U+21AC (decimal 8620)
+   defining Unicode char U+21AD (decimal 8621)
+   defining Unicode char U+21AE (decimal 8622)
+   defining Unicode char U+21AF (decimal 8623)
+   defining Unicode char U+21B0 (decimal 8624)
+   defining Unicode char U+21B1 (decimal 8625)
+   defining Unicode char U+21B6 (decimal 8630)
+   defining Unicode char U+21B7 (decimal 8631)
+   defining Unicode char U+21BA (decimal 8634)
+   defining Unicode char U+21BB (decimal 8635)
+   defining Unicode char U+21BC (decimal 8636)
+   defining Unicode char U+21BD (decimal 8637)
+   defining Unicode char U+21BE (decimal 8638)
+   defining Unicode char U+21BF (decimal 8639)
+   defining Unicode char U+21C0 (decimal 8640)
+   defining Unicode char U+21C1 (decimal 8641)
+   defining Unicode char U+21C2 (decimal 8642)
+   defining Unicode char U+21C3 (decimal 8643)
+   defining Unicode char U+21C4 (decimal 8644)
+   defining Unicode char U+21C5 (decimal 8645)
+   defining Unicode char U+21C6 (decimal 8646)
+   defining Unicode char U+21C7 (decimal 8647)
+   defining Unicode char U+21C8 (decimal 8648)
+   defining Unicode char U+21C9 (decimal 8649)
+   defining Unicode char U+21CA (decimal 8650)
+   defining Unicode char U+21CB (decimal 8651)
+   defining Unicode char U+21CC (decimal 8652)
+   defining Unicode char U+21CD (decimal 8653)
+   defining Unicode char U+21CE (decimal 8654)
+   defining Unicode char U+21CF (decimal 8655)
+   defining Unicode char U+21D0 (decimal 8656)
+   defining Unicode char U+21D1 (decimal 8657)
+   defining Unicode char U+21D2 (decimal 8658)
+   defining Unicode char U+21D3 (decimal 8659)
+   defining Unicode char U+21D4 (decimal 8660)
+   defining Unicode char U+21D5 (decimal 8661)
+   defining Unicode char U+21D6 (decimal 8662)
+   defining Unicode char U+21D7 (decimal 8663)
+   defining Unicode char U+21D8 (decimal 8664)
+   defining Unicode char U+21D9 (decimal 8665)
+   defining Unicode char U+21DA (decimal 8666)
+   defining Unicode char U+21DB (decimal 8667)
+   defining Unicode char U+21DC (decimal 8668)
+   defining Unicode char U+21DD (decimal 8669)
+   defining Unicode char U+21E0 (decimal 8672)
+   defining Unicode char U+21E2 (decimal 8674)
+   defining Unicode char U+21E4 (decimal 8676)
+   defining Unicode char U+21E5 (decimal 8677)
+   defining Unicode char U+21F0 (decimal 8688)
+   defining Unicode char U+21FD (decimal 8701)
+   defining Unicode char U+21FE (decimal 8702)
+   defining Unicode char U+21FF (decimal 8703)
+   defining Unicode char U+2200 (decimal 8704)
+   defining Unicode char U+2201 (decimal 8705)
+   defining Unicode char U+2202 (decimal 8706)
+   defining Unicode char U+2203 (decimal 8707)
+   defining Unicode char U+2204 (decimal 8708)
+   defining Unicode char U+2205 (decimal 8709)
+   defining Unicode char U+2207 (decimal 8711)
+   defining Unicode char U+2208 (decimal 8712)
+   defining Unicode char U+2209 (decimal 8713)
+   defining Unicode char U+220B (decimal 8715)
+   defining Unicode char U+220C (decimal 8716)
+   defining Unicode char U+220D (decimal 8717)
+   defining Unicode char U+220F (decimal 8719)
+   defining Unicode char U+2210 (decimal 8720)
+   defining Unicode char U+2211 (decimal 8721)
+   defining Unicode char U+2213 (decimal 8723)
+   defining Unicode char U+2214 (decimal 8724)
+   defining Unicode char U+2216 (decimal 8726)
+   defining Unicode char U+2217 (decimal 8727)
+   defining Unicode char U+2218 (decimal 8728)
+   defining Unicode char U+2219 (decimal 8729)
+   defining Unicode char U+221A (decimal 8730)
+   defining Unicode char U+221B (decimal 8731)
+   defining Unicode char U+221C (decimal 8732)
+   defining Unicode char U+221D (decimal 8733)
+   defining Unicode char U+221E (decimal 8734)
+   defining Unicode char U+2220 (decimal 8736)
+   defining Unicode char U+2221 (decimal 8737)
+   defining Unicode char U+2222 (decimal 8738)
+   defining Unicode char U+2223 (decimal 8739)
+   defining Unicode char U+2224 (decimal 8740)
+   defining Unicode char U+2225 (decimal 8741)
+   defining Unicode char U+2226 (decimal 8742)
+   defining Unicode char U+2227 (decimal 8743)
+   defining Unicode char U+2228 (decimal 8744)
+   defining Unicode char U+2229 (decimal 8745)
+   defining Unicode char U+222A (decimal 8746)
+   defining Unicode char U+222B (decimal 8747)
+   defining Unicode char U+222C (decimal 8748)
+   defining Unicode char U+222D (decimal 8749)
+   defining Unicode char U+222E (decimal 8750)
+   defining Unicode char U+222F (decimal 8751)
+   defining Unicode char U+2230 (decimal 8752)
+   defining Unicode char U+2232 (decimal 8754)
+   defining Unicode char U+2233 (decimal 8755)
+   defining Unicode char U+2234 (decimal 8756)
+   defining Unicode char U+2235 (decimal 8757)
+   defining Unicode char U+2236 (decimal 8758)
+   defining Unicode char U+2237 (decimal 8759)
+   defining Unicode char U+2238 (decimal 8760)
+   defining Unicode char U+2239 (decimal 8761)
+   defining Unicode char U+223C (decimal 8764)
+   defining Unicode char U+223D (decimal 8765)
+   defining Unicode char U+223F (decimal 8767)
+   defining Unicode char U+2240 (decimal 8768)
+   defining Unicode char U+2241 (decimal 8769)
+   defining Unicode char U+2243 (decimal 8771)
+   defining Unicode char U+2244 (decimal 8772)
+   defining Unicode char U+2245 (decimal 8773)
+   defining Unicode char U+2247 (decimal 8775)
+   defining Unicode char U+2248 (decimal 8776)
+   defining Unicode char U+2249 (decimal 8777)
+   defining Unicode char U+224A (decimal 8778)
+   defining Unicode char U+224D (decimal 8781)
+   defining Unicode char U+224E (decimal 8782)
+   defining Unicode char U+224F (decimal 8783)
+   defining Unicode char U+2250 (decimal 8784)
+   defining Unicode char U+2251 (decimal 8785)
+   defining Unicode char U+2252 (decimal 8786)
+   defining Unicode char U+2253 (decimal 8787)
+   defining Unicode char U+2254 (decimal 8788)
+   defining Unicode char U+2255 (decimal 8789)
+   defining Unicode char U+2256 (decimal 8790)
+   defining Unicode char U+2257 (decimal 8791)
+   defining Unicode char U+2258 (decimal 8792)
+   defining Unicode char U+2259 (decimal 8793)
+   defining Unicode char U+225A (decimal 8794)
+   defining Unicode char U+225B (decimal 8795)
+   defining Unicode char U+225C (decimal 8796)
+   defining Unicode char U+225D (decimal 8797)
+   defining Unicode char U+225F (decimal 8799)
+   defining Unicode char U+2260 (decimal 8800)
+   defining Unicode char U+2261 (decimal 8801)
+   defining Unicode char U+2262 (decimal 8802)
+   defining Unicode char U+2263 (decimal 8803)
+   defining Unicode char U+2264 (decimal 8804)
+   defining Unicode char U+2265 (decimal 8805)
+   defining Unicode char U+2266 (decimal 8806)
+   defining Unicode char U+2267 (decimal 8807)
+   defining Unicode char U+2268 (decimal 8808)
+   defining Unicode char U+2269 (decimal 8809)
+   defining Unicode char U+226A (decimal 8810)
+   defining Unicode char U+226B (decimal 8811)
+   defining Unicode char U+226C (decimal 8812)
+   defining Unicode char U+226D (decimal 8813)
+   defining Unicode char U+226E (decimal 8814)
+   defining Unicode char U+226F (decimal 8815)
+   defining Unicode char U+2270 (decimal 8816)
+   defining Unicode char U+2271 (decimal 8817)
+   defining Unicode char U+2272 (decimal 8818)
+   defining Unicode char U+2273 (decimal 8819)
+   defining Unicode char U+2274 (decimal 8820)
+   defining Unicode char U+2275 (decimal 8821)
+   defining Unicode char U+2276 (decimal 8822)
+   defining Unicode char U+2277 (decimal 8823)
+   defining Unicode char U+2278 (decimal 8824)
+   defining Unicode char U+2279 (decimal 8825)
+   defining Unicode char U+227A (decimal 8826)
+   defining Unicode char U+227B (decimal 8827)
+   defining Unicode char U+227C (decimal 8828)
+   defining Unicode char U+227D (decimal 8829)
+   defining Unicode char U+227E (decimal 8830)
+   defining Unicode char U+227F (decimal 8831)
+   defining Unicode char U+2280 (decimal 8832)
+   defining Unicode char U+2281 (decimal 8833)
+   defining Unicode char U+2282 (decimal 8834)
+   defining Unicode char U+2283 (decimal 8835)
+   defining Unicode char U+2284 (decimal 8836)
+   defining Unicode char U+2285 (decimal 8837)
+   defining Unicode char U+2286 (decimal 8838)
+   defining Unicode char U+2287 (decimal 8839)
+   defining Unicode char U+2288 (decimal 8840)
+   defining Unicode char U+2289 (decimal 8841)
+   defining Unicode char U+228A (decimal 8842)
+   defining Unicode char U+228B (decimal 8843)
+   defining Unicode char U+228E (decimal 8846)
+   defining Unicode char U+228F (decimal 8847)
+   defining Unicode char U+2290 (decimal 8848)
+   defining Unicode char U+2291 (decimal 8849)
+   defining Unicode char U+2292 (decimal 8850)
+   defining Unicode char U+2293 (decimal 8851)
+   defining Unicode char U+2294 (decimal 8852)
+   defining Unicode char U+2295 (decimal 8853)
+   defining Unicode char U+2296 (decimal 8854)
+   defining Unicode char U+2297 (decimal 8855)
+   defining Unicode char U+2298 (decimal 8856)
+   defining Unicode char U+2299 (decimal 8857)
+   defining Unicode char U+229A (decimal 8858)
+   defining Unicode char U+229B (decimal 8859)
+   defining Unicode char U+229D (decimal 8861)
+   defining Unicode char U+229E (decimal 8862)
+   defining Unicode char U+229F (decimal 8863)
+   defining Unicode char U+22A0 (decimal 8864)
+   defining Unicode char U+22A1 (decimal 8865)
+   defining Unicode char U+22A2 (decimal 8866)
+   defining Unicode char U+22A3 (decimal 8867)
+   defining Unicode char U+22A4 (decimal 8868)
+   defining Unicode char U+22A5 (decimal 8869)
+   defining Unicode char U+22A6 (decimal 8870)
+   defining Unicode char U+22A7 (decimal 8871)
+   defining Unicode char U+22A9 (decimal 8873)
+   defining Unicode char U+22AA (decimal 8874)
+   defining Unicode char U+22AB (decimal 8875)
+   defining Unicode char U+22AC (decimal 8876)
+   defining Unicode char U+22AD (decimal 8877)
+   defining Unicode char U+22AE (decimal 8878)
+   defining Unicode char U+22AF (decimal 8879)
+   defining Unicode char U+22B2 (decimal 8882)
+   defining Unicode char U+22B3 (decimal 8883)
+   defining Unicode char U+22B4 (decimal 8884)
+   defining Unicode char U+22B8 (decimal 8888)
+   defining Unicode char U+22BA (decimal 8890)
+   defining Unicode char U+22BB (decimal 8891)
+   defining Unicode char U+22BC (decimal 8892)
+   defining Unicode char U+22B5 (decimal 8885)
+   defining Unicode char U+22C0 (decimal 8896)
+   defining Unicode char U+22C1 (decimal 8897)
+   defining Unicode char U+22C2 (decimal 8898)
+   defining Unicode char U+22C3 (decimal 8899)
+   defining Unicode char U+22C4 (decimal 8900)
+   defining Unicode char U+22C5 (decimal 8901)
+   defining Unicode char U+22C6 (decimal 8902)
+   defining Unicode char U+22C7 (decimal 8903)
+   defining Unicode char U+22C8 (decimal 8904)
+   defining Unicode char U+22C9 (decimal 8905)
+   defining Unicode char U+22CA (decimal 8906)
+   defining Unicode char U+22CB (decimal 8907)
+   defining Unicode char U+22CC (decimal 8908)
+   defining Unicode char U+22CD (decimal 8909)
+   defining Unicode char U+22CE (decimal 8910)
+   defining Unicode char U+22CF (decimal 8911)
+   defining Unicode char U+22D0 (decimal 8912)
+   defining Unicode char U+22D1 (decimal 8913)
+   defining Unicode char U+22D2 (decimal 8914)
+   defining Unicode char U+22D3 (decimal 8915)
+   defining Unicode char U+22D4 (decimal 8916)
+   defining Unicode char U+22D6 (decimal 8918)
+   defining Unicode char U+22D7 (decimal 8919)
+   defining Unicode char U+22D8 (decimal 8920)
+   defining Unicode char U+22D9 (decimal 8921)
+   defining Unicode char U+22DA (decimal 8922)
+   defining Unicode char U+22DB (decimal 8923)
+   defining Unicode char U+22DE (decimal 8926)
+   defining Unicode char U+22DF (decimal 8927)
+   defining Unicode char U+22E0 (decimal 8928)
+   defining Unicode char U+22E1 (decimal 8929)
+   defining Unicode char U+22E2 (decimal 8930)
+   defining Unicode char U+22E3 (decimal 8931)
+   defining Unicode char U+22E4 (decimal 8932)
+   defining Unicode char U+22E5 (decimal 8933)
+   defining Unicode char U+22E6 (decimal 8934)
+   defining Unicode char U+22E7 (decimal 8935)
+   defining Unicode char U+22E8 (decimal 8936)
+   defining Unicode char U+22E9 (decimal 8937)
+   defining Unicode char U+22EA (decimal 8938)
+   defining Unicode char U+22EB (decimal 8939)
+   defining Unicode char U+22EC (decimal 8940)
+   defining Unicode char U+22ED (decimal 8941)
+   defining Unicode char U+22EE (decimal 8942)
+   defining Unicode char U+22EF (decimal 8943)
+   defining Unicode char U+22F0 (decimal 8944)
+   defining Unicode char U+22F1 (decimal 8945)
+   defining Unicode char U+2300 (decimal 8960)
+   defining Unicode char U+2308 (decimal 8968)
+   defining Unicode char U+2309 (decimal 8969)
+   defining Unicode char U+230A (decimal 8970)
+   defining Unicode char U+230B (decimal 8971)
+   defining Unicode char U+2322 (decimal 8994)
+   defining Unicode char U+2323 (decimal 8995)
+   defining Unicode char U+25A1 (decimal 9633)
+   defining Unicode char U+25B3 (decimal 9651)
+   defining Unicode char U+2615 (decimal 9749)
+   defining Unicode char U+2621 (decimal 9761)
+   defining Unicode char U+2627 (decimal 9767)
+   defining Unicode char U+2639 (decimal 9785)
+   defining Unicode char U+263A (decimal 9786)
+   defining Unicode char U+2660 (decimal 9824)
+   defining Unicode char U+2661 (decimal 9825)
+   defining Unicode char U+2662 (decimal 9826)
+   defining Unicode char U+2663 (decimal 9827)
+   defining Unicode char U+266D (decimal 9837)
+   defining Unicode char U+266E (decimal 9838)
+   defining Unicode char U+266F (decimal 9839)
+   defining Unicode char U+26A0 (decimal 9888)
+   defining Unicode char U+27C2 (decimal 10178)
+   defining Unicode char U+2A00 (decimal 10752)
+   defining Unicode char U+2A01 (decimal 10753)
+   defining Unicode char U+2A02 (decimal 10754)
+   defining Unicode char U+2A05 (decimal 10757)
+   defining Unicode char U+2A06 (decimal 10758)
+   defining Unicode char U+2A1D (decimal 10781)
+   defining Unicode char U+2A3F (decimal 10815)
+   defining Unicode char U+2A7D (decimal 10877)
+   defining Unicode char U+2A7E (decimal 10878)
+   defining Unicode char U+2E18 (decimal 11800)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+\c@thm=\count100
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count101
+\Gm@cntv=\count102
+\c@Gm@tempcnt=\count103
+\Gm@bindingoffset=\dimen112
+\Gm@wd@mp=\dimen113
+\Gm@odd@mp=\dimen114
+\Gm@even@mp=\dimen115
+\Gm@layoutwidth=\dimen116
+\Gm@layoutheight=\dimen117
+\Gm@layouthoffset=\dimen118
+\Gm@layoutvoffset=\dimen119
+\Gm@dimlist=\toks29
+)
+(./cm_points.aux)
+\openout1 = `cm_points.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 23.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+stmry on input line 23.
+LaTeX Font Info:    No file Ustmry.fd. on input line 23.
+
+
+LaTeX Font Warning: Font shape `U/stmry/m/n' undefined
+(Font)              using `U/cmr/m/n' instead on input line 23.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+LaTeX Font Info:    Try loading font information for U+euf on input line 449.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 450.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [4] (./cm_points.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3332 strings out of 494999
+ 35728 string characters out of 6180227
+ 103761 words of memory out of 5000000
+ 6503 multiletter control sequences out of 15000+600000
+ 14321 words of font info for 43 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 36i,10n,68p,274b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/rambaud/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1000.600pk> </home
+/rambaud/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/rambaud/
+.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/rambaud/.texmf-va
+r/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/rambaud/.texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecrm1000.600pk> </home/rambaud/.texmf-var/fonts/pk/ljfour/
+jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm7.pfb>
+Output written on cm_points.pdf (4 pages, 215345 bytes).
+PDF statistics:
+ 297 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
